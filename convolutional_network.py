@@ -13,7 +13,7 @@ import tensorflow as tf
 
 # Import fashion-mnist data
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/tmp/data1/", one_hot=True)
+mnist = input_data.read_data_sets("/tmp/fashion-mnist-data/", one_hot=True)
 
 # Parameters
 learning_rate = 0.001
