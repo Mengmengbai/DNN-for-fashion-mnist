@@ -4,7 +4,7 @@ This example is using the fashion-mnist database
 (https://github.com/zalandoresearch/fashion-mnist)
 
 Author: Mengmeng Bai
-Project: https://github.com/aymericdamien/TensorFlow-Examples/
+Project: https://github.com/SrCMpink/DNN-for-fashion-mnist/blob/master/
 '''
 
 from __future__ import print_function
