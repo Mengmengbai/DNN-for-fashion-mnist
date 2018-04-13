@@ -1,6 +1,12 @@
 # DNN-for-fashion-mnist
 Fashion test accuracy 0.9896
 
+# Request
+        tensorflow 1.0+
+        python 2.76
+        CUDA 7.0
+        fashion mnist data
+
 # Network Structure
 
 ![](https://github.com/SrCMpink/HelloWorld/blob/master/DNN-net1.png)  
