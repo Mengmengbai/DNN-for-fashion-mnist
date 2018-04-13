@@ -1,2 +1,2 @@
 # DNN-for-fashion-mnist
-Fashion test accuracy 0.9879
+Fashion test accuracy 0.9896
