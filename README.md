@@ -11,6 +11,13 @@ The detailed process of training is shown in the figure below
 
 ![](https://github.com/SrCMpink/HelloWorld/blob/master/DNN-net-train.png) 
 
-training_iters = 1500000
-batch_size = 100
+    training_iters = 1500000
+    batch_size = 100
+    learning_rate = 0.001
+    dropout1 = 0.75
+    dropout2 = 0.75
+    padding='SAME'
+    cost = tf.nn.softmax_cross_entropy_with_logits
+    optimizer = tf.train.AdamOptimizer
+    
 
