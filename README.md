@@ -17,7 +17,7 @@ The detailed process of training is shown in the figure below
     dropout1 = 0.75
     dropout2 = 0.75
     padding='SAME'
-    cost = tf.nn.softmax_cross_entropy_with_logits
-    optimizer = tf.train.AdamOptimizer
+    cost = tf.nn.softmax_cross_entropy_with_logits
+    optimizer = tf.train.AdamOptimizer
     
 
