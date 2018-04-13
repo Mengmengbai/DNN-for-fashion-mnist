@@ -26,4 +26,5 @@ Fashion test accuracy 0.9896
     cost = tf.nn.softmax_cross_entropy_with_logits
     optimizer = tf.train.AdamOptimizer
     
-
+# About ResNet
+I also use the traditional ResNet and his improved version, but the effect is not good. I guess it's too little training set.sets.
