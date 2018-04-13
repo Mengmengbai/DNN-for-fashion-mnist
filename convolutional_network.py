@@ -17,7 +17,7 @@ mnist = input_data.read_data_sets("/tmp/fashion-mnist-data/", one_hot=True)
 
 # Parameters
 learning_rate = 0.001
-training_iters = 1200000
+training_iters = 1500000
 batch_size = 100
 display_step = 10
 
@@ -64,32 +64,6 @@ def conv_layer(inpt, filter_shape, stride):
     out = tf.nn.relu(batch_norm)
 
     return out
-
-
-def residual_block(inpt, output_depth, down_sample, projection=False):
-    input_depth = inpt.get_shape().as_list()[3]
-    if down_sample:
-        filter_ = [1, 2, 2, 1]
-        inpt = tf.nn.max_pool(inpt, ksize=filter_, strides=filter_, padding='SAME')
-
-    conv1 = conv_layer(inpt, [3, 3, input_depth, output_depth], 1)
-    conv2 = conv_layer(conv1, [3, 3, output_depth, output_depth], 1)
-
-    if input_depth != output_depth:
-        if projection:
-            # Option B: Projection shortcut
-            input_layer = conv_layer(inpt, [1, 1, input_depth, output_depth], 2)
-        else:
-            # Option A: Zero-padding
-            input_layer = tf.pad(inpt, [[0, 0], [0, 0], [0, 0], [0, output_depth - input_depth]])
-    else:
-        input_layer = inpt
-
-    res = conv2 + input_layer
-
-
-    return res
-
 
 
 # Create some wrappers for simplicity
